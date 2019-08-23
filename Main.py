@@ -15,7 +15,8 @@ while(True):
 
     if len(facecount) > 3:
         faceinside = True
-        break
+        if faceinside == True:
+            playsound('w.mp3')
 
     for(x,y,w,h) in facecount:
         cv2.rectangle(frame,(x,y),(x+w, y+h),(0,0,255),thickness=2)
@@ -25,8 +26,8 @@ while(True):
         break
     
 
-if faceinside == True:
-    playsound('test.mp3')
+# if faceinside == True:
+#     playsound('test.mp3')
 
 
 cap.release()
